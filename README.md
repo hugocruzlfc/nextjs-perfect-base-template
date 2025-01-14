@@ -16,8 +16,13 @@ echo "pnpm dlx commitlint --edit \$1" > .husky/commit-msg
 
 [Commitizen cz-cli guide](https://github.com/commitizen/cz-cli)
 
+pnpm add -D commitizen
+
 pnpm dlx commitizen init cz-conventional-changelog --pnpm --save-dev --save-exact
 
 Create prepare-commit-msg hook to run commitizen
 
 echo "exec < /dev/tty && node_modules/.bin/cz --hook || true" > .husky/prepare-commit-msg
+
+"eslint-config-prettier": "^9.1.0",
+"eslint-plugin-prettier": "^5.2.1",

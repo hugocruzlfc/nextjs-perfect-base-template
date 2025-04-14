@@ -7,12 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "release": "commit-and-tag-version",
     "prepare": "husky"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "commit-and-tag-version": "^12.5.1",
     "lucide-react": "^0.488.0",
     "next": "15.3.0",
     "react": "19.1.0",
@@ -53,6 +55,12 @@
       "prettier --write"
     ],
     "*.{md,html,json}": "prettier --write"
+  },
+  "commit-and-tag-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    }
   },
   "pnpm": {
     "overrides": {
